@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123d35">
+<title>أمي… أنتِ بوصلتي | دعوة تفاعلية</title>
+<style>
+:root{--green:#123d35;--green2:#1e6555;--gold:#d8b66a;--cream:#fff9eb;--ink:#173b34;--muted:#6d8178}
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at top,#e7f0e7,#f8f4e8 55%,#e8eee8);color:var(--ink);min-height:100vh}
+.wrap{max-width:760px;margin:auto;padding:22px 16px 40px}
+.top{text-align:center;color:var(--green);font-size:13px;letter-spacing:.4px;margin:8px 0 16px}
+.card{background:rgba(255,253,246,.96);border:1px solid #dfcf9f;border-radius:28px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 55px #173b3418;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:9px;border:1px solid #e8d9b3;border-radius:21px;pointer-events:none}
+.content{position:relative;z-index:1;text-align:center}
+.compass{width:116px;height:116px;margin:8px auto 20px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fffdf5,#f1e4c3);box-shadow:0 8px 24px #b99b5233;position:relative}
+.compass:before{content:"";position:absolute;inset:9px;border:1px dashed #b99b52;border-radius:50%}
+.needle{font-size:52px;line-height:1;animation:turn 8s ease-in-out infinite;display:block}
+@keyframes turn{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+h1{font-size:clamp(29px,7vw,43px);color:var(--green);margin:8px 0 10px}
+h2{font-size:clamp(23px,5vw,31px);color:var(--green);margin:8px 0 14px}
+p{line-height:2;font-size:16px;margin:10px auto;max-width:590px}
+.sub{color:var(--muted);font-size:14px}
+.btn{border:0;border-radius:999px;padding:14px 24px;margin:8px 4px;background:var(--green);color:white;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 6px 15px #123d3522;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:var(--green2)}
+.btn.alt{background:#f1e5c5;color:var(--green);border:1px solid #d8bd7b;box-shadow:none}
+.btn.light{background:white;color:var(--green);border:1px solid #d8bd7b;box-shadow:none}
+.hidden{display:none!important}
+.progress{display:flex;justify-content:center;gap:7px;margin:0 0 18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#d8d4c7}
+.dot.on{background:var(--gold);width:23px;border-radius:10px}
+.question{font-weight:bold;margin:22px 0 10px}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:500px;margin:16px auto}
+.option{padding:14px 10px;border:1px solid #d8c99f;border-radius:15px;background:#fffdf7;color:var(--green);font-size:16px;cursor:pointer}
+.option:hover{background:#f5edda}
+.feedback{min-height:34px;color:var(--green2);font-weight:bold;margin:12px 0}
+.invite{background:linear-gradient(145deg,#123d35,#1d594b);color:#fff9eb;border-radius:22px;padding:25px 20px;margin:20px 0;border:1px solid #d8b66a;box-shadow:inset 0 0 0 5px #ffffff0c}
+.invite h2,.invite h3{color:#f3d995}
+.invite p{color:#fff9eb}
+.pill{display:inline-block;border:1px solid #d8b66a;color:#f3d995;padding:7px 14px;border-radius:30px;font-size:13px;margin:6px}
+.quote{font-size:19px;font-weight:bold;color:var(--green);line-height:1.9;margin:20px auto}
+.footer{font-size:12px;color:#78877e;margin-top:20px}
+@media(max-width:460px){.options{grid-template-columns:1fr}.btn{width:100%;margin:7px 0}.card{padding:23px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">دعوة إلكترونية تفاعلية • رحلة تعلم عن بُعد</div>
+  <main class="card">
+    <div class="content">
+      <div class="progress" aria-label="مراحل الدعوة">
+        <span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+
+      <section class="step" id="s1">
+        <div class="compass"><span class="needle">🧭</span></div>
+        <span class="pill">إلى أمي الحبيبة</span>
+        <h1>أمي… أنتِ بوصلتي</h1>
+        <p>هناك رحلة صغيرة تنتظرنا، وفي نهايتها سنكتشف أن أجمل الطرق هي تلك التي نتعلمها معًا.</p>
+        <p class="sub">هل أنتِ مستعدة لفتح الرسالة واكتشاف وجهتنا؟</p>
+        <button class="btn" onclick="go(2)">افتحي الدعوة ✨</button>
+      </section>
+
+      <section class="step hidden" id="s2">
+        <div class="compass"><span class="needle">🌅</span></div>
+        <h2>قبل أن ننطلق… سؤال سريع!</h2>
+        <p>لنختبر بوصلتنا معًا. اختاري الإجابة الصحيحة:</p>
+        <div class="question">من أي جهة تشرق الشمس؟</div>
+        <div class="options">
+          <button class="option" onclick="answer(this,false)">الغرب 🌇</button>
+          <button class="option" onclick="answer(this,true)">الشرق 🌅</button>
+        </div>
+        <div class="feedback" id="f1"></div>
+        <button class="btn hidden" id="next2" onclick="go(3)">أحسنتِ! تابعي الرحلة</button>
+      </section>
+
+      <section class="step hidden" id="s3">
+        <div class="compass"><span class="needle">🗺️</span></div>
+        <h2>ما وجهتنا؟</h2>
+        <p>في رحلتنا سنتعلم كيف نعرف موقع المكان، ونستخدم الجهات الأصلية لنهتدي إلى الطريق.</p>
+        <div class="invite">
+          <span class="pill">هدف الرحلة</span>
+          <h3>نتعلم… نكتشف… ونشارك</h3>
+          <p>أن تتعرف ابنتكِ على مفهوم الموقع والجهات الأصلية، وتحدد الأماكن من حولها، وتربط ما تتعلمه بمواقف من حياتها اليومية، بمشاركتكِ ودعمكِ.</p>
+        </div>
+        <p class="quote">«حين تتشاركين مع ابنتكِ لحظة اكتشاف، تتحول المعلومة إلى أثر وذكرى»</p>
+        <button class="btn" onclick="go(4)">اكتشفي دعوتكِ 💌</button>
+      </section>
+
+      <section class="step hidden" id="s4">
+        <div class="compass"><span class="needle">💌</span></div>
+        <h2>دعوة من القلب</h2>
+        <div class="invite">
+          <span class="pill">دعوة لحضور حصة عن بُعد</span>
+          <h2>أمي الحبيبة</h2>
+          <h3>أنتِ مدعوة لتكوني بوصلتي في رحلة التعلم!</h3>
+          <p>يسعدني دعوتكِ لمشاركتي حصة تفاعلية في درس <strong>«الموقع»</strong>، نبحر فيها في عالم الاتجاهات، ونكتشف كيف نحدد مواقع الأماكن من حولنا.</p>
+          <p>وجودكِ ليس حضورًا فقط… بل مشاركة تمنح ابنتكِ ثقة، وتصنع معها لحظة تعلم جميلة.</p>
+          <h3>من قلب البيت… تبدأ مغامرة الاكتشاف.</h3>
+        </div>
+        <p class="sub">لا نحتاج إلى موعد في هذه البطاقة؛ تفاصيل الحصة تُرسل لكم بشكل مستقل.</p>
+        <button class="btn" onclick="go(5)">أترك بصمتي في الرحلة</button>
+      </section>
+
+      <section class="step hidden" id="s5">
+        <div class="compass"><span class="needle">❤️</span></div>
+        <h2>كيف ستكونين شريكة الرحلة؟</h2>
+        <p>اختاري بصمتكِ الجميلة، ثم شاركي ابنتكِ هذه التجربة.</p>
+        <div class="options">
+          <button class="option" onclick="finish('سأكتشف الاتجاهات مع ابنتي 🧭')">🧭 نكتشف الاتجاهات</button>
+          <button class="option" onclick="finish('سنحدد مواقع الأشياء في منزلنا 🏡')">🏡 نحدد مواقع الأشياء</button>
+          <button class="option" onclick="finish('سأكون شريكة ابنتي في التعلم ❤️')">❤️ أشاركها التعلم</button>
+          <button class="option" onclick="finish('سأصنع مع ابنتي ذكرى تعلم جميلة ✨')">✨ نصنع ذكرى جميلة</button>
+        </div>
+        <div class="feedback" id="finalMsg"></div>
+        <p class="quote">«ليست كل الرحلات بحثًا عن مكان… بعض الرحلات تصنع اتجاهًا، وتزرع معرفة، وتجمع قلبين»</p>
+        <p><strong>معلمتكِ المحبة<br>فاطمة الثبيتي</strong></p>
+        <button class="btn alt" onclick="restart()">إعادة مشاهدة الدعوة</button>
+      </section>
+    </div>
+  </main>
+  <div class="footer" style="text-align:center">أمي وابنتي… معًا نكتشف العالم 🧭</div>
+</div>
+<script>
+let current=1;
+function updateDots(n){document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===n-1))}
+function go(n){document.querySelectorAll('.step').forEach(s=>s.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden');current=n;updateDots(n);window.scrollTo({top:0,behavior:'smooth'})}
+function answer(el,ok){document.querySelectorAll('#s2 .option').forEach(b=>b.disabled=true);const f=document.getElementById('f1');if(ok){f.textContent='إجابة صحيحة! تشرق الشمس من الشرق، وبوصلتكِ في الاتجاه الصحيح 🌟'};else{f.textContent='قريبة! تشرق الشمس من الشرق. جرّبي تذكّر شروق الصباح 🌅'};document.getElementById('next2').classList.remove('hidden')}
+function finish(msg){document.getElementById('finalMsg').textContent=msg+' — شكرًا لأنكِ جزء من رحلتنا!';document.querySelectorAll('#s5 .option').forEach(b=>b.disabled=true)}
+function restart(){document.querySelectorAll('#s2 .option,#s5 .option').forEach(b=>b.disabled=false);document.getElementById('f1').textContent='';document.getElementById('next2').classList.add('hidden');document.getElementById('finalMsg').textContent='';go(1)}
+</script>
+</body>
+</html>
